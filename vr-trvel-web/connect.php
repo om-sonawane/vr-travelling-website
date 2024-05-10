@@ -2,10 +2,10 @@
 // Establish database connection
 $servername = "localhost";
 $username = "your_username";
-$password = "your_password";
+$password = "@Sonawane123";
 $dbname = "your_database_name";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli('localhost','root','','','registeration1');
 
 // Check connection
 if ($conn->connect_error) {
