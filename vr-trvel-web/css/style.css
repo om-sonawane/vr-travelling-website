@@ -11,6 +11,7 @@
 /* Home page */
 
 .banner {
+    position:relative;
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -21,12 +22,14 @@
 
 .banner video {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
     object-fit: cover;
     width: 100%;
     height: 100%;
     pointer-events: none;
+    transform: translate(-50%,-50%);
+    z-index: -1;
 }
 
 .content {
@@ -126,6 +129,14 @@ nav ul li a {
     background-color: rgb(21, 74, 74);
     box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.4);
 }
+
+@media(max-width:786px) {
+    .title h1{
+        font-size: 7vh;
+    }
+}
+    
+
 
 /* Services */
 
