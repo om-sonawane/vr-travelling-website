@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,11 +34,11 @@
         <div class="register-form">
             <h1>Register <span>Here</span></h1>
             <form action="connect.php" method="post" onsubmit="return validateform()">
-
-            <input type="text" name="myname1" placeholder="Name" id="name" required>
-            <input type="email" name="myemail" placeholder="Email-Id" id="" required>
+            <div id="signUpMessage"class="messageDiv" style="display: none;">/div>
+            <input type="text" name="myname1" placeholder="Name" id="rname" required>
+            <input type="email" name="myemail" placeholder="Email-Id" id="remail" required>
             <input type="tel" name="myphone" placeholder="Phone No." id="phonenum" required>
-            <input type="number" name="myage" placeholder="Age" id="" required>
+            <input type="number" name="myage" placeholder="Age" id="rage" required>
             <h4>Gender</h4>
             <input type="radio" name="mygender" id="" required> Male &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
             <input type="radio" name="mygender" id=""> Female
