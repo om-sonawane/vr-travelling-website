@@ -1,4 +1,5 @@
-*{
+/* Universal styles */
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -8,8 +9,7 @@
     scroll-behavior: smooth;
 }
 
-/* Home page */
-
+/* Home page styling */
 .banner {
     position:relative;
     width: 100%;
@@ -48,6 +48,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 10px;
 }
 
 nav .logo {
@@ -56,15 +57,17 @@ nav .logo {
     margin-left: 8%;
 }
 
-nav ul li {
-    list-style: none;
-    display: inline-block;
-    margin-left: 40px;
-}
-
+/* Navbar Links */
 .navbar {
     display: flex;
     margin-right: 4vh;
+    transition: all 0.3s ease;
+}
+
+.navbar li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
 }
 
 .navbar a {
@@ -74,20 +77,97 @@ nav ul li {
     border-radius: 4px;
     font-weight: 500;
     text-decoration: none;
-    transition: ease 0.40s;
+    transition: ease 0.4s;
 }
 
-.navbar a:hover, .navbar a.active {
+.navbar a:hover,
+.navbar a.active {
     background: white;
     color: black;
     box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
     border-radius: 5px;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: 17px;
+/* Burger icon styling */
+.burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    margin-right: 4vh;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+/* Media query for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    /* Show burger icon on smaller screens */
+    .burger {
+        display: flex;
+    }
+
+    /* Hide navbar links on mobile until burger is clicked */
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        background-color: rgb(0, 0, 0);
+        width: 100%;
+        text-align: center;
+        
+    }
+
+    /* Show the navbar when the active class is added */
+    .navbar.active {
+        display: flex;
+    }
+
+    /* Make each navbar item stack vertically */
+    .navbar li {
+        display: block;
+        margin: 10px 0;
+    }
+
+
+
+/* Media query for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    /* Show burger icon */
+    .burger {
+        display: flex;
+    }
+
+    /* Hide navbar on mobile until burger is clicked */
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        background-color: rgb(0, 0, 0);
+        width: 100%;
+    }
+
+    /* When the navbar is active (after clicking burger) */
+    .navbar.active {
+        display: flex;
+    }
+
+    /* Make each navbar item stack vertically on mobile */
+    .navbar li {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+
 }
 
 .title {
