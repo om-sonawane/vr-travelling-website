@@ -8,7 +8,11 @@
     list-style: none;
     scroll-behavior: smooth;
 }
-
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
 /* Home page styling */
 .banner {
     position:relative;
@@ -54,7 +58,7 @@ nav {
 nav .logo {
     width: 60px;
     margin: 2vh;
-    margin-left: 8%;
+    margin-left: 25%;
 }
 
 /* Navbar Links */
@@ -86,6 +90,55 @@ nav .logo {
     color: black;
     box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
     border-radius: 5px;
+}
+/* Reset body and HTML margins and padding */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Full-width layout for navbar and menu items */
+.navbar {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #000000;
+    color: #fff;
+}
+
+.menu-items {
+    display: none; /* hidden by default for burger menu */
+    flex-direction: column;
+    width: 100vw; /* Full width on mobile */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000000;
+}
+
+.menu-items a {
+    color: #fff;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+/* Burger icon styling */
+.burger-icon {
+    cursor: pointer;
+    display: block;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .burger-icon {
+        display: block;
+    }
+    .menu-items.active {
+        display: flex;
+    }
 }
 
 /* Burger icon styling */
