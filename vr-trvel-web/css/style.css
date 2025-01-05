@@ -63,7 +63,7 @@ nav .logo {
 /* Navbar Links */
 .navbar {
     display: flex;
-    margin-right: 4vh;
+    margin-right: 0vh;
     transition: all 0.3s ease;
 }
 
@@ -482,7 +482,7 @@ html, body {
 
 .newsletter form input:last-child {
     display: inline-block;
-    position: absolute;
+    position: relative;
     outline: none;
     border: 2px solid transparent;
     border-radius: 20px;
@@ -495,6 +495,7 @@ html, body {
     border: 2px solid rgb(0, 0, 0);
     background-color: white;
     color: rgb(21, 74, 74);
+    margin: 17px;
 }
 
 
